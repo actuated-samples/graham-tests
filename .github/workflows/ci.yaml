@@ -13,6 +13,6 @@ jobs:
     name: ci
     runs-on: [actuated-16cpu-32gb, actuated-kvm]
     steps:
-      - name: Show kvm
-        run: |
-            ls /dev/kvm
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: |
+            nix-build '<nixpkgs/nixos/tests/doas.nix>'
