@@ -1,4 +1,4 @@
-name: CI
+name: ci
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   specs:
-    name: specs
+    name: ci
     runs-on: [actuated-16cpu-32gb, actuated-kvm]
     steps:
       - name: Show kvm
