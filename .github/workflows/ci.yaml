@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - master
+
+jobs:
+  specs:
+    name: specs
+    runs-on: [actuated-16cpu-32gb, actuated-kvm]
+    steps:
+      - name: Show kvm
+        run: |
+            ls /dev/kvm
